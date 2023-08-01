@@ -9,11 +9,11 @@
 <body>
    <h1>Travel reservation form</h1> 
   <p>Full name*: 
-    <br><input type="text" placeholder="FirstName LastName">
+    <br><input type="text" placeholder="FirstName LastName" required>
   </p>  
    <p>
     Email Address*:
-    <br><input type="email" name="" id="" placeholder="EMAIL_ADDRESS">
+    <br><input type="email" name="" id="" placeholder="EMAIL_ADDRESS" required>
    </p>
 <p> Select Tour Package*:
     <br> <select name="Package" id="Package">
@@ -23,10 +23,10 @@
         <option value="">Assam</option>
     </select><p>
     <p>Arrival Date*:
-<br><input type="date" name="" id="">
+<br><input type="date" name="" id="" required>
     </p>
 <p>Number of persons*:
-    <br><input type="number" placeholder="UNKNOWN_TYPE">
+    <br><input type="number" placeholder="UNKNOWN_TYPE" required>
 
 <p>What would you want to avail?*
 <br>Boarding <input type="checkbox" name="" id="">
@@ -36,8 +36,8 @@
     <br><input type="text" pattern="[A-Za-z]{6}" placeholder="UNKNOWN_TYPE" class="inputs">
 </p>
 <P>Terms and conditions*
-<br>I agree<input type="radio" name="" id="">
-I disagree<input type="radio" name="" id="">
+<br>I agree<input type="radio" name="a" id="" required>
+I disagree<input type="radio" name="a" id="" required>
 </P>
 <p> <input type="submit" value="Complete reservation"></p>
 </body>
