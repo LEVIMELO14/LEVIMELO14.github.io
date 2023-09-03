@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 1</title>
+</head>
+<body>
+    <main>
+        <div id="one">One</div>
+        <div id="two">Two</div>
+        <div id="three">Three</div>
+        <div id="four">Four</div>
+        <div id="five">Five</div>
+        <div id="six">Six</div>
+    </main>
+</body>
+<style>
+    body {
+        margin: 10px;
+    }
+    main {
+        height: 97vh;
+        width: 100vw;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 15px;
+        display: grid;
+        grid-template-areas: 
+        "One Two Two"
+        "Three Two Two"
+        "Three vazio Four"
+        "Three Five Six";
+    }
+    div {
+        background-color: rgba(255, 165, 0, 0.2);
+        padding: 15px;
+        border: solid 1px orange;
+        color: darkorange;
+        border-radius: 5px;
+    }
+    #one {
+        grid-area: One;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    #two {
+        grid-area: Two;
+    }
+    #three {
+        grid-area: Three;
+    }
+    #four {
+        grid-area: Four;
+    }
+    #five {
+        grid-area: Five;
+    }
+    #six {
+        grid-area: Six;
+    }
+</style>
+</html>
