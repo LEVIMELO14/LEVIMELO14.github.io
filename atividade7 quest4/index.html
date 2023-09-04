@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="site.css">
+    <title>Notícias</title>
+</head>
+<body>
+    <div class="noticias">
+        <div class="tabela" id="tabela1">
+            <h2>+Milionária: prêmio acumula e próximo concurso pagará R$ 70 milhões</h2>
+            <p>Ninguém acertou as seis dezenas e dois trevos da sorte do concurso 75 da +Milionária sorteadas no sábado.</p>
+        </div>
+        <div class="tabela" id="tabela2">
+            <h2>Lula vai à Índia para assumir a Presidência do G20</h2>
+            <p>O Presidente embarca para Nova Déli, nesta semana, para participar da conferência que reúne as maiores economias do mundo. Brasil assumirá o bloco pela primeira vez.</p>
+        </div>
+        <div class="tabela" id="tabela3">
+            <h2>União Brasil declara apoio a Juscelino Filho após operação da PF</h2>
+            <p>Em nota, assinada pelos líderes Elmar Nascimento e Efraim Filho, o partido expressa ‘solidariedade’ ao ministro das Comunicações e à irmã de Juscelino, Luanna Rezende. Ambos são investigados pela Operação Benesse da Polícia Federala.</p>
+        </div>
+        <div class="tabela" id="tabela4">
+            <h2>RR registrou em seis meses 44 prisões por tráfico de drogas</h2>
+            <p>Durante o primeiro semestre deste ano, mais de 426 kg de drogas entre maconha e cocaína foram apreendidos.</p>
+        </div>
+        <div class="tabela" id="tabela5">
+            <h2>Bombeiros fazem parto de jovem em frente a quartel </h2>
+            <p>Uma jovem de 20 anos teve o parto realizado por bombeiros em frente ao Quartel Geral do Corpo de Bombeiros Militar de Roraima (CBM-RR), na noite desta quarta-feira.</p>
+        </div>
+        <div class="tabela" id="tabela6">
+            <h2>Rússia ataca porto ucraniano...</h2>
+            <p>Um ataque de drones russos em um porto na Ucrânia, neste domingo (3) deixou duas pessoas feridas, de acordo com autoridades locais.</p>
+        </div>
+        <div class="tabela" id="tabela7">
+            <h2>Avião cai durante sobrevoo em chá revelação no México</h2>
+            <p>Piloto chegou a ser resgatado com vida, mas não resistiu aos ferimentos e morreu no hospital.</p>
+        </div>
+        <div class="tabela" id="tabela8">
+            <h2>Por que França vai gastar mais de R$ 1 bilhão para destruir excedente de vinho</h2>
+            <p>Superprodução, queda de consumo e inflação afetam o setor vinícola francês.</p>
+        </div>
+    </div>
+</body>
+</html>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+}
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #1B1B1B;
+}
+
+.noticias {
+    margin: 5px;
+    box-sizing: border-box;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+    "tabela1 tabela1 tabela2 tabela2"
+    "tabela1 tabela1 tabela3 tabela4"
+    "tabela5 tabela6 tabela7 tabela7"
+    "tabela8 tabela6 tabela7 tabela7";
+}
+
+h2 {
+    color: #e9e9e9;
+}
+
+.tabela:hover {
+    scale: 1.05;
+}
+
+#tabela1 {
+    grid-area: tabela1;
+    font-size: 3vw;
+    background-color: #E71E64;
+}
+#tabela2 {
+    grid-area: tabela2;
+    font-size: 2vw;
+    background-color: #FC9C12;
+}
+#tabela3 {
+    grid-area: tabela3;
+    background-color: #AA3BBB;
+}
+#tabela4 {
+    grid-area: tabela4;
+    background-color: #566C7A;
+}
+#tabela5 {
+    grid-area: tabela5;
+    background-color: #6A6A6A;
+}
+#tabela6 {
+    grid-area: tabela6;
+    font-size: 1.7vw;
+    background-color: #3AD345;
+}
+#tabela7 {
+    grid-area: tabela7;
+    font-size: 2.5vw;
+    background-color: #3490F3;
+}
+#tabela8 {
+    grid-area: tabela8;
+    background-color: #4E008A;
+}
+
+@media screen and (max-width: 720px) {
+    .noticias {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-areas: none;
+        gap: 0;
+        row-gap: 5px;
+    }
+    #tabela1,
+    #tabela2,
+    #tabela3,
+    #tabela4,
+    #tabela5,
+    #tabela6,
+    #tabela7,
+    #tabela8 {
+    grid-area: auto;
+    font-size: 2vh;
+    }
+}
+</style>
